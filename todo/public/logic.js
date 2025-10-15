@@ -13,6 +13,7 @@ export function submitTodo(
     ref.current.focus();
   } else if (inputBoxValue !== "") {
     setTodoText([...todoText, inputBoxValue]);
+    localStorage.setItem(todoText);
   }
   console.log(todoText);
 }

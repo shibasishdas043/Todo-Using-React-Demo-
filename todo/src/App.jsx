@@ -22,6 +22,10 @@ const App = () => {
     console.log(inputBoxValue);
   }
 
+  // useEffect(() => {
+  //   setTodoText((localStorage.getItem(todoText)));
+  // }, [todoText])
+
   useEffect(() => {
     console.log("todo length : ", todoTextLength);
   }, [todoTextLength]);
@@ -43,7 +47,7 @@ const App = () => {
         />
 
         {/* FilterTodos */}
-        {todoText.length === 0 ? null : (
+        {todoText.length === 0 || todoText.length === 1 ? null : (
           <FilterTodos
             filterTodo={filterTodo} //function
             todoText={todoText} //prop
@@ -54,7 +58,7 @@ const App = () => {
 
         {/*todo border line*/}
         {todoText.length === 0 ? null : (
-          <div className="bg-white border-[1px] w-[350px] m-1"></div>
+          <div className="p-[1px] border-0 w-[350px] m-1 bg-gradient-to-r from-green-400/70  via-yellow-300 to-red-400/70"></div>
         )}
         {/*todo border line */}
 

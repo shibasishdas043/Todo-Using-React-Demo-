@@ -36,7 +36,7 @@ const TodoItem = ({
         </div>
         <button
           onClick={() => deleteTodo(todoListindex, todoText, setTodoText)}
-          className="border-0 h-12 rounded-2xl p-2 bg-red-800 hover:bg-red-700 cursor-pointer transition duration-500 delay-75"
+          className="border-0 h-12 rounded-2xl p-2  hover:bg-red-700 cursor-pointer transition duration-500 delay-75 backdrop-blur-3xl bg-black/30 text-red-300 hover:text-white"
         >
           Remove
         </button>
